@@ -1,4 +1,4 @@
-package org.example.com.personal.todo.domain.ValueObject
+package com.personal.todo.domain.valueobject
 
 @JvmInline
 value class NoteBody(private val value: String) {
