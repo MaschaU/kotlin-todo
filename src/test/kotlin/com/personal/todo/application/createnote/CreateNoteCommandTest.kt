@@ -10,16 +10,16 @@ class CreateNoteCommandTest {
     fun `should create command with correct properties`() {
         val title = "Test Title"
         val body = "Test Body"
-        val tags = "tag1,tag2,tag3"
+        val id = "123e4567-e89b-12d3-a456-426614174000"
 
         val command = CreateNoteCommand(
             noteTitle = title,
             noteBody = body,
-            noteTags = tags
+            noteId = id
         )
 
         assertEquals(title, command.noteTitle)
         assertEquals(body, command.noteBody)
-        assertEquals(tags, command.noteTags)
+        assertEquals(id, command.noteId)
     }
 }
