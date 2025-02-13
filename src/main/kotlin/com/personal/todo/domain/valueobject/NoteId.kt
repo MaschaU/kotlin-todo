@@ -1,12 +1,10 @@
 package com.personal.todo.domain.valueobject
 
-data class NoteId private constructor(private val noteId: String) {
-
+@JvmInline
+value class NoteId private constructor(val noteId: String) {
     init {
-        try {
-            java.util.UUID.fromString(noteId)
-        } catch (e: IllegalArgumentException) {
-            throw IllegalArgumentException("Invalid UUID string: $noteId")
+        require(runCatching { java.util.UUID.fromString(noteId) }.isSuccess) {
+            "Invalid UUID string: $noteId"
         }
     }
 
