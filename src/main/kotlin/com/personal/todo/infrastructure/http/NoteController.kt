@@ -1,9 +1,8 @@
-package com.personal.todo.infrastructure.http.controller
+package com.personal.todo.application.com.personal.todo.infrastructure.http
 
 import com.personal.todo.application.usecase.createnote.CreateNoteCommand
 import com.personal.todo.application.usecase.createnote.CreateNoteCommandHandler
 import com.personal.todo.infrastructure.http.request.CreateNoteRequest
-import com.personal.todo.infrastructure.http.response.NoteResponse
 import jakarta.validation.Valid
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

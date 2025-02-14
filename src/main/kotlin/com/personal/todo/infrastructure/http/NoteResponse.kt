@@ -1,4 +1,4 @@
-package com.personal.todo.infrastructure.http.response
+package com.personal.todo.application.com.personal.todo.infrastructure.http
 
 data class NoteResponse(
     val noteId: String,
