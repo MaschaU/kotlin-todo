@@ -7,16 +7,14 @@ import java.util.*
 
 class CreateNoteCommandHandler(
     private val notesRepository: NoteRepository,
-): CreateNoteCommandHandlerInterface
-{
-    override fun handle(command: CreateNoteCommand) {
-
+) : CreateNoteCommandHandlerInterface {
+    override fun handle(command: CreateNoteCommand): Note {
         val note = Note(
+            noteId = UUID.randomUUID().toString(),
             noteTitle = command.noteTitle,
-            noteBody = command.noteBody,
-            noteId = UUID.randomUUID().toString()
+            noteBody = command.noteBody
         )
-
         notesRepository.createNote(note)
+        return note
     }
 }

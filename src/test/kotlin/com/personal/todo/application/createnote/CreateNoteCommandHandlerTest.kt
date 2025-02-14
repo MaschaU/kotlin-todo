@@ -27,9 +27,9 @@ class CreateNoteCommandHandlerTest {
     @Test
     fun `should create note with correct properties and save it`() {
         val command = CreateNoteCommand(
+            noteId = "random-generated-id",
             noteTitle = "Test Title",
-            noteBody = "Test Body",
-            noteId = "random-generated-id"
+            noteBody = "Test Body"
         )
 
         handler.handle(command)
